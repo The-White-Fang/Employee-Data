@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>Employees Data</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container mt-5">
+		<button id="add-emp" class="btn btn-primary float-right px-4 py-1">Add</button>
+		<h3 class="mb-3">Employee Data</h3>
+		<span id="no-data" class="hide">No data available</span>
+		<table id="table" class="table hide">
+			<thead>
+				<tr>
+					<th scope="col">id</th>
+					<th scope="col">Name</th>
+					<th scope="col">DOB</th>
+					<th scope="col">CTC</th>
+					<th scope="col">Experience Technologies: (yrs)</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody id="table-body"></tbody>
+		</table>
+		<div id="pop-up" style="display: none;">
+			<div class="popup-inner">
+				<button id="close-form"><i>&#215;</i></button>
+				<form>
+					<input type="hidden" name="emp-id" id="emp-id">
+					<div class="form-group">
+						<label for="">Employee Name</label>
+						<input class="form-control" id="emp-name" name="emp-name" type="text" required>
+					</div>
+					<div class="form-group">
+						<label for="emp-dob">DOB</label>
+						<input class="form-control" id="emp-dob" name="emp-dov" type="text" required>
+					</div>
+					<div class="form-group">
+						<label for="">CTC</label>
+						<input class="form-control" id="emp-ctc" name="emp-name" type="number" required>
+					</div>
+					<label>Experience</label>
+					<div id="selected-tech" class="border border-dark rounded px-1 py-2 mb-1">
+						<h6>Selected:</h6>
+					</div>
+					<div id="multi-form-field">
+						<div class="form-group">
+							<label for="emp-tech">Technologies</label>
+							<select name="emp-tech" id="emp-tech" class="form-control"></select>
+						</div>
+						<div class="form-group">
+							<label for="emp-tech-ex">Experience (in years)</label>
+							<input type="number" name="emp-tech-ex" id="emp-tech-ex" value="0" class="form-control">
+						</div>
+						<button id="add-tech" class="btn btn-secondary float-right">Add</button>
+					</div>
+					<input class="btn btn-primary float-right px-5" type="submit" value="Update">
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script src="/js/index.js"></script>
+</script>
+
+</html>
